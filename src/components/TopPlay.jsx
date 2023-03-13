@@ -45,11 +45,7 @@ const TopPlay = () => {
     const { activeSong, isPlaying } = useSelector((state) => state.player);
     const { data } = useGetTopChartsQuery();
 
-    const data1 = data?.tracks.map((track) => ({
-      ...track,
-    }))
-    
-    const topPlays = data1?.slice(0, 5);
+    const topPlays = data?.slice(0, 6);
     const divRef = useRef(null);
 
     useEffect(() => {

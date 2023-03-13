@@ -12,8 +12,7 @@ const SongDetails = () => {
     const { activeSong , isPlaying } = useSelector((state) => state.player);
     const { data :songData , 
         isFetching: isFetchingSongDetails } = useGetSongdetailsQuery(songid);
-
-    console.log(songData);
+        
     return (
         <div className="flex flex-col">
             <DetailsHeader artistId="" songData={songData} />
@@ -29,6 +28,8 @@ const SongDetails = () => {
                         )): <p className="text-gray-400 text-base">Sorry, no lyrics found!</p> }
                     </div>
             </div>
+            
+            <RelatedSongs/>
 
         </div>
     

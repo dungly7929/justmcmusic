@@ -39,7 +39,7 @@ const DetailsHeader = ({artistId, artistData, songData}) => {
 
           </div>
 
-          
+          <div className="w-full sm:h-44 h-24"/>
         </div>
       </div>
   )

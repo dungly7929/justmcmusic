@@ -17,10 +17,6 @@ const Discover = () => {
 
   if(error) return <Error/>;
 
-  const data1 = data.tracks.map((track) => ({
-    ...track,
-  }))
-
   return (
         <div className="flex flex-col">
             <div className="w-full flex justify-between items-center
@@ -39,13 +35,13 @@ const Discover = () => {
 
             <div className="flex flex-wrap sm:justify-start justify-center gap-8">
                 { 
-                  data1?.map((song, i) => (
+                  data?.map((song, i) => (
                     <SongCard 
                       key={song.key} 
                       song={song}
                       isPlaying={isPlaying}
                       activeSong={activeSong}
-                      data={data1}
+                      data={data}
                       i={i}
                     />
                 ))}
