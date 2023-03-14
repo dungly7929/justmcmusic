@@ -6,13 +6,11 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import { store } from './redux/store';
-import NavigationToTop from "./ultis/NavigationToTop"
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
-        <NavigationToTop />
         <App />
       </Router>
     </Provider>
